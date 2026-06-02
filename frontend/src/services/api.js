@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://quleep-assessment.onrender.com/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 export const getAllProducts = async () => {
   const response = await axios.get(`${API_BASE_URL}/products`);
@@ -13,6 +13,6 @@ export const getProductById = async (id) => {
 };
 
 export const createProduct = async (productData) => {
-  console.log("API HIT:", API_BASE_URL); // ADD THIS
-  return axios.post(`${API_BASE_URL}/products`, productData);
+  const response = await axios.post(`${API_BASE_URL}/products`, productData);
+  return response.data;
 };
