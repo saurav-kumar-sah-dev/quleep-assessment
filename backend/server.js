@@ -16,7 +16,10 @@ app.use(cors({
     "https://quleep-assessment.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
+app.options("*", cors());
 app.use(express.json());
 
 // MongoDB Connection
