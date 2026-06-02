@@ -13,6 +13,6 @@ export const getProductById = async (id) => {
 };
 
 export const createProduct = async (productData) => {
-  const response = await axios.post(`${API_BASE_URL}/products`, productData);
-  return response.data;
+  console.log("API HIT:", API_BASE_URL); // ADD THIS
+  return axios.post(`${API_BASE_URL}/products`, productData);
 };
