@@ -4,7 +4,7 @@
   "framework": "vite",
   "env": {
     "VITE_API_URL": {
-      "value": "https://your-backend-url.onrender.com"
+      "value": "https://quleep-assessment.onrender.com"
     }
   }
 }
